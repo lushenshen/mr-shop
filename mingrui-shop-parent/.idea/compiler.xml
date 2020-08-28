@@ -9,6 +9,7 @@
         <module name="mingrui-shop-service-api-xxx" />
         <module name="mingrui-shop-common-core" />
         <module name="mingrui-shop-basic-eureka-server" />
+        <module name="mingrui-shop-basic-zuul-serer" />
         <module name="mingrui-shop-service-xxx" />
       </profile>
     </annotationProcessing>
@@ -16,6 +17,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="mingrui-shop-basic-eureka-server" options="-parameters" />
+      <module name="mingrui-shop-basic-zuul-serer" options="-parameters" />
       <module name="mingrui-shop-basics" options="-parameters" />
       <module name="mingrui-shop-commoms" options="-parameters" />
       <module name="mingrui-shop-common-core" options="-parameters" />
