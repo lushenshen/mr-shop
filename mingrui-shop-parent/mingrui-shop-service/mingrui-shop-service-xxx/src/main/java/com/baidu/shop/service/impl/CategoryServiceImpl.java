@@ -104,7 +104,6 @@ public class CategoryServiceImpl extends BaseApiService implements CategoryServi
         }
 
 
-
         //构建条件查询 通过当前被删除节点的parentid查询数据
         Example example = new Example(CategoryEntity.class);
         example.createCriteria().andEqualTo("parentId",categoryEntity.getParentId());
