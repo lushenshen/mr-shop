@@ -5,10 +5,8 @@ import com.baidu.shop.base.BaseApiService;
 import com.baidu.shop.base.Result;
 import com.baidu.shop.dto.SpecGroupDTO;
 import com.baidu.shop.dto.SpecParamDTO;
-import com.baidu.shop.entity.CategoryEntity;
 import com.baidu.shop.entity.SpecGroupEntity;
 import com.baidu.shop.entity.SpecParamEntity;
-import com.baidu.shop.exception.MingruiException;
 import com.baidu.shop.mapper.SpecGroupMapper;
 import com.baidu.shop.mapper.SpecParamMapper;
 import com.baidu.shop.service.SpecificationService;
@@ -18,24 +16,26 @@ import com.baidu.shop.utils.ObjectUtil;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RestController;
 import tk.mybatis.mapper.entity.Example;
+
 import javax.annotation.Resource;
 import java.util.List;
+
 /**
- * @ClassName SpecGroutServiceImpl
+ * @ClassName SpecificationServiceImpl
  * @Description: TODO
  * @Author luchenchen
- * @Date 2020/9/3
+ * @Date 2020/9/8
  * @Version V1.0
  **/
 @RestController
-class SpecificationServiceImpl extends BaseApiService implements SpecificationService {
+public class SpecificationServiceImpl extends BaseApiService implements SpecificationService {
 
     @Resource
-    private  SpecGroupMapper specGroupMapper;
+    private SpecGroupMapper specGroupMapper;
     @Resource
     private SpecParamMapper specParamMapper;
 
-    @Transactional
+
     @Override
     public Result<List<SpecGroupEntity>> getSepcGroupInfo(SpecGroupDTO specGroupDTO) {
 
@@ -76,31 +76,20 @@ class SpecificationServiceImpl extends BaseApiService implements SpecificationSe
         return this.setResultSuccess();
     }
 
-    @Transactional
+
     @Override
     public Result<JSONObject> getSpecParamInfo(SpecParamDTO specParamDTO) {
 
-//        List<SpecParamEntity> list = null;
-//
-//        if(ObjectUtil.isNotNull(specParamDTO)){
-//
-//            Example example = new Example(SpecParamEntity.class);
-//            Example.Criteria criteria = example.createCriteria();
-//
-//            if (ObjectUtil.isNotNull(specParamDTO.getGroupId())) {
-//
-//                criteria.andEqualTo("groupId", specParamDTO.getGroupId());
-//            }
-//            list = specParamMapper.selectByExample(example);
-//        }
-//
-//        return this.setResultSuccess(list);
-//    }
-
-        if(ObjectUtil.isNull(specParamDTO.getGroupId())) throw new MingruiException("规格组id不能为空");
-
         Example example = new Example(SpecParamEntity.class);
-        example.createCriteria().andEqualTo("groupId",specParamDTO.getGroupId());
+        Example.Criteria criteria = example.createCriteria();
+
+        if(ObjectUtil.isNotNull(specParamDTO.getGroupId())){
+            criteria.andEqualTo("gropuId",specParamDTO.getGroupId());
+        }
+
+        if(ObjectUtil.isNotNull(specParamDTO.getCid())){
+            criteria.andEqualTo("cid",specParamDTO.getCid());
+        }
 
         List<SpecParamEntity> list = specParamMapper.selectByExample(example);
 
@@ -119,7 +108,7 @@ class SpecificationServiceImpl extends BaseApiService implements SpecificationSe
     @Override
     public Result<JSONObject> editParam(SpecParamDTO specParamDTO) {
 
-        specParamMapper.updateByPrimaryKeySelective(BaiduBeanUtil.copyProperties(specParamDTO,SpecParamEntity.class));
+        specParamMapper.updateByPrimaryKeySelective(BaiduBeanUtil.copyProperties(specParamDTO, SpecParamEntity.class));
         return this.setResultSuccess();
     }
 
@@ -132,5 +121,4 @@ class SpecificationServiceImpl extends BaseApiService implements SpecificationSe
 
         return this.setResultSuccess();
     }
-
 }

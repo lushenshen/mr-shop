@@ -14,7 +14,8 @@ public interface CategoryMapper extends Mapper<CategoryEntity>, SelectByIdListMa
     @Select(value ="Select count(1) from tb_category_brand where category_id = #{id}")
     Integer getByCategoryId(Integer id);
 
-    @Select(value = "Select count(1) from tb_supc_group where cid = #{id    }")
+    @Select(value = "Select count(1) from tb_supc_group where cid = #{id}")
     Integer getSepcGroup(Integer id);
+
 
 }

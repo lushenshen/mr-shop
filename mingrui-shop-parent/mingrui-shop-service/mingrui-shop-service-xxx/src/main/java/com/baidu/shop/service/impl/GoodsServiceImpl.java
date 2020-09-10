@@ -1,15 +1,12 @@
 package com.baidu.shop.service.impl;
 
+import com.alibaba.fastjson.JSONObject;
 import com.baidu.shop.base.BaseApiService;
 import com.baidu.shop.base.Result;
-import com.baidu.shop.dto.BrandDTO;
+import com.baidu.shop.dto.SkuDTO;
 import com.baidu.shop.dto.SpuDTO;
-import com.baidu.shop.entity.BrandEntity;
-import com.baidu.shop.entity.SpuEntity;
-import com.baidu.shop.mapper.BrandMapper;
-import com.baidu.shop.mapper.CategoryMapper;
-import com.baidu.shop.mapper.SpuMapper;
-import com.baidu.shop.service.BrandService;
+import com.baidu.shop.entity.*;
+import com.baidu.shop.mapper.*;
 import com.baidu.shop.service.GoodsService;
 import com.baidu.shop.status.HTTPStatus;
 import com.baidu.shop.utils.BaiduBeanUtil;
@@ -17,11 +14,13 @@ import com.baidu.shop.utils.ObjectUtil;
 import com.baidu.shop.utils.StringUtil;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RestController;
 import tk.mybatis.mapper.entity.Example;
 
 import javax.annotation.Resource;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -44,8 +43,17 @@ public class GoodsServiceImpl extends BaseApiService implements GoodsService {
     @Resource
     private CategoryMapper categoryMapper;
 
+    @Resource
+    private SkuMapper skuMapper;
+
+    @Resource
+    private StockMapper stockMapper;
+
+    @Resource
+    private SupDetailMapper supDetailMapper;
+
     @Override
-    public Result<List<SpuEntity>> getSpuInfo(SpuDTO spuDTO) {
+    public Result<List<SpuDTO>> getSpuInfo(SpuDTO spuDTO) {
 
         //分页
         if(ObjectUtil.isNotNull(spuDTO.getPage())
@@ -68,18 +76,28 @@ public class GoodsServiceImpl extends BaseApiService implements GoodsService {
         List<SpuEntity> list = spuMapper.selectByExample(example);
 
         //可以有优化的空间
-
         List<SpuDTO> dtos = list.stream().map(spu -> {
 
-            //通过品牌id得到品牌名称
-            //此处不需要验证参数为空,因为数据库中这个字段是必填的
             BrandEntity brandEntity = brandMapper.selectByPrimaryKey(spu.getBrandId());
             //获取分类id-->转成数组-->通过idList查询出数据,得到数据集合-->调用stream函数-->调用map函数返回一个新的函数
             // -->调用Stream.collect转换集合-->调用Collectors.joining("/")将集合转换成/拼接的字符串
-            String categoryNames = categoryMapper.selectByIdList(Arrays.asList(spu.getCid1(), spu.getCid2(), spu.getCid3()))
-                    .stream()
-                    .map(category -> category.getName())
-                    .collect(Collectors.joining("/"));
+            // String categoryNames = categoryMapper.selectByIdList(Arrays.asList(spu.getCid1(), spu.getCid2(), spu.getCid3()))
+            //    .stream()
+            //    .map(category -> category.getName())
+            //    .collect(Collectors.joining("/"));
+
+            //得到id集合
+            List<Integer> idArr = Arrays.asList(spu.getCid1(), spu.getCid2(), spu.getCid3());
+
+            //通过Id集合查询数据
+            List<CategoryEntity> categoryEntities = categoryMapper.selectByIdList(idArr);
+
+            //map函数返回一个新的数组<String>category.getName()是string类型
+            //Stream.collect()//集合的转换功能
+            String categoryNames = categoryEntities.stream().map(category -> {
+                return category.getName();
+            }).collect(Collectors.joining("/")); //将集合转换成/拼接的字符串
+
 
             SpuDTO dto = BaiduBeanUtil.copyProperties(spu, SpuDTO.class);
             dto.setBrandName(brandEntity.getName());
@@ -96,4 +114,109 @@ public class GoodsServiceImpl extends BaseApiService implements GoodsService {
         //借用一下message属性
         return this.setResult(HTTPStatus.OK,total + "",dtos);
     }
+
+    @Transactional
+    @Override
+    public Result<JSONObject> addInfo(SpuDTO spuDTO) {
+
+        Date date = new Date();
+
+        SpuEntity spuEntity = BaiduBeanUtil.copyProperties(spuDTO, SpuEntity.class);
+        spuEntity.setSaleable(1);
+        spuEntity.setValid(1);
+        spuEntity.setCreateTime(date);
+        spuEntity.setLastUpdateTime(date);
+        //新增spu
+        spuMapper.insertSelective(spuEntity);
+
+        Integer spuId = spuEntity.getId();
+        //新增spudetail
+        SpuDetailEntity spuDetailEntity = BaiduBeanUtil.copyProperties(spuDTO.getSpuDetail(), SpuDetailEntity.class);
+        spuDetailEntity.setSpuId(spuId);
+        supDetailMapper.insertSelective(spuDetailEntity);
+
+        this.addSkusAndStocks(spuDTO.getSkus(),spuId,date);
+
+        return this.setResultSuccess();
+    }
+
+    private void addSkusAndStocks(List<SkuDTO> skus, Integer spuId, Date date){
+        skus.stream().forEach(skuDTO -> {
+            //新增sku!!!!!
+            SkuEntity skuEntity = BaiduBeanUtil.copyProperties(skuDTO, SkuEntity.class);
+            skuEntity.setSpuId(spuId);
+            skuEntity.setCreateTime(date);
+            skuEntity.setLastUpdateTime(date);
+            skuMapper.insertSelective(skuEntity);
+
+            //新增stock
+            StockEntity stockEntity = new StockEntity();
+            stockEntity.setSkuId(skuEntity.getId());
+            stockEntity.setStock(skuDTO.getStock());
+            stockMapper.insertSelective(stockEntity);
+        });
+    }
+
+    @Override
+    public Result<JSONObject> editGoodsInfo(SpuDTO spuDTO) {
+
+        Date date = new Date();
+        //修改spu信息
+        SpuEntity spuEntity = BaiduBeanUtil.copyProperties(spuDTO, SpuEntity.class);
+        spuEntity.setLastUpdateTime(date);//!!!!!!!!!设置最后更新时间
+
+        spuMapper.updateByPrimaryKeySelective(spuEntity);
+        //修改spudetail
+        supDetailMapper.updateByPrimaryKeySelective(BaiduBeanUtil.copyProperties(spuDTO.getSpuDetail(),SpuDetailEntity.class));
+
+        this.delSkusAndStocks(spuDTO.getId());
+
+        this.addSkusAndStocks(spuDTO.getSkus(),spuDTO.getId(),date);
+
+        return this.setResultSuccess();
+    }
+
+    @Override
+    public Result<List<SpuDTO>> getSkuBySpuId(Integer spuId) {
+
+        List<SkuDTO> list = skuMapper.selectSkuAndStockBySpuId(spuId);
+
+        return this.setResultSuccess(list);
+    }
+
+    @Override
+    public Result<SpuDetailEntity> getDetailBySpuId(Integer spuId) {
+
+        SpuDetailEntity spuDetailEntity = supDetailMapper.selectByPrimaryKey(spuId);
+
+        return this.setResultSuccess(spuDetailEntity);
+    }
+
+    @Override
+    public Result<JSONObject> delGoods(Integer spuId) {
+
+        //删除spu
+        spuMapper.deleteByPrimaryKey(spuId);
+        //删除detail
+        supDetailMapper.deleteByPrimaryKey(spuId);
+
+        this.delSkusAndStocks(spuId);
+        return this.setResultSuccess();
+    }
+
+    public void delSkusAndStocks (Integer spuId){
+
+        Example example = new Example(SkuEntity.class);
+        example.createCriteria().andEqualTo("spuId",spuId);
+        //通过spuId查询出来将要被删除的Sku
+        List<Long> skuIdList = skuMapper.selectByExample(example)
+                .stream()
+                .map(sku -> sku.getId())
+                .collect(Collectors.toList());
+        //通过skuId集合删除sku
+        skuMapper.deleteByIdList(skuIdList);
+        //通过skuId集合删除stock
+        stockMapper.deleteByIdList(skuIdList);
+    }
+
 }

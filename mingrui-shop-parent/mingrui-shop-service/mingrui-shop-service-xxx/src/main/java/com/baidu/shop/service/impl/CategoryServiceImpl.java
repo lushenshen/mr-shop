@@ -4,7 +4,9 @@ import com.alibaba.fastjson.JSONObject;
 import com.baidu.shop.base.BaseApiService;
 import com.baidu.shop.base.Result;
 import com.baidu.shop.entity.CategoryEntity;
+import com.baidu.shop.entity.SpuEntity;
 import com.baidu.shop.mapper.CategoryMapper;
+import com.baidu.shop.mapper.SpuMapper;
 import com.baidu.shop.service.CategoryService;
 import com.baidu.shop.status.HTTPStatus;
 import com.baidu.shop.utils.ObjectUtil;
@@ -27,6 +29,9 @@ public class CategoryServiceImpl extends BaseApiService implements CategoryServi
 
     @Resource
     private CategoryMapper categoryMapper;
+
+    @Resource
+    private SpuMapper spuMapper;
 
     @Transactional
     @Override
@@ -97,14 +102,28 @@ public class CategoryServiceImpl extends BaseApiService implements CategoryServi
             return this.setResultError(HTTPStatus.OPERATION_ERROR,"当前分类被品牌绑定,不能删除");
         }
 
+        Example example1 = new Example(SpuEntity.class);
+        Example.Criteria criteria = example1.createCriteria();
+        criteria.andEqualTo("cid1",categoryEntity.getId());
+        List<SpuEntity> spuEntityList = spuMapper.selectByExample(example1);
+        if(spuEntityList.size() > 0){
+            return this.setResultError(HTTPStatus.OPERATION_ERROR,"当前时分类被商品绑定，不能删除");
+        }
+
         //判断当前规格是否被绑定
         Integer count1 = categoryMapper.getSepcGroup(id);
         if(count1 > 0){
             return this.setResultError(HTTPStatus.OPERATION_ERROR,"当前分类被规格组绑定,不能删除");
         }
 
+        this.delCategory(categoryEntity);
+        categoryMapper.deleteByPrimaryKey(id);//执行删除
 
-        //构建条件查询 通过当前被删除节点的parentid查询数据
+        return this.setResultSuccess();
+
+    }
+
+    public void  delCategory(CategoryEntity categoryEntity){
         Example example = new Example(CategoryEntity.class);
         example.createCriteria().andEqualTo("parentId",categoryEntity.getParentId());
         List<CategoryEntity> list = categoryMapper.selectByExample(example);
@@ -118,15 +137,11 @@ public class CategoryServiceImpl extends BaseApiService implements CategoryServi
                 categoryMapper.updateByPrimaryKeySelective(parentCateEntity);
             }
         }
-
-        categoryMapper.deleteByPrimaryKey(id);//执行删除
-
-        return this.setResultSuccess();
-
     }
 
     @Override
     public Result<List<CategoryEntity>> getByBrand(Integer brandId) {
+
         List<CategoryEntity> byBrandId = categoryMapper.getByBrandId(brandId);
 
         return this.setResultSuccess(byBrandId);
