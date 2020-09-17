@@ -9,11 +9,16 @@
         <module name="mingrui-shop-common-core" />
         <module name="mingrui-shop-basic-eureka-server" />
         <module name="mingrui-shop-basic-upload-server" />
+        <module name="mingrui-shop-service-api-search1" />
         <module name="mingrui-shop-basic-zuul-serer" />
         <module name="mingrui-shop-service-xxx" />
+        <module name="mingrui-shop-service-search" />
         <module name="mingrui-shop-service-api-xxx" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mingrui-shop-service-api-search" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -25,7 +30,10 @@
       <module name="mingrui-shop-common-core" options="-parameters" />
       <module name="mingrui-shop-service" options="-parameters" />
       <module name="mingrui-shop-service-api" options="-parameters" />
+      <module name="mingrui-shop-service-api-search" options="-parameters" />
+      <module name="mingrui-shop-service-api-search1" options="-parameters" />
       <module name="mingrui-shop-service-api-xxx" options="-parameters" />
+      <module name="mingrui-shop-service-search" options="-parameters" />
       <module name="mingrui-shop-service-xxx" options="-parameters" />
     </option>
   </component>

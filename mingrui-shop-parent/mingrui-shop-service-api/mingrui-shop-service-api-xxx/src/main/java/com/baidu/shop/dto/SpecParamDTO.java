@@ -1,5 +1,6 @@
 package com.baidu.shop.dto;
 
+import com.baidu.shop.entity.SpecParamEntity;
 import com.baidu.shop.validate.group.MingruiOperation;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -16,7 +17,7 @@ import javax.validation.constraints.NotNull;
  **/
 @Data
 @ApiModel(value = "规格参数数据传输DTO")
-public class SpecParamDTO {
+public class SpecParamDTO extends SpecParamEntity {
     @ApiModelProperty(value = "主键", example = "1")
     @NotNull(message = "主键不能为空", groups = {MingruiOperation.Update.class})
     private Integer id;
