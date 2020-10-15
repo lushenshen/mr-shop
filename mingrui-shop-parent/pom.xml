@@ -12,7 +12,6 @@
         <module>mingrui-shop-commoms</module>
         <module>mingrui-shop-service</module>
         <module>mingrui-shop-service-api</module>
-        <module>mingrui-shop-service-api-search</module>
     </modules>
 
     <!--父级项目不需要打包所有packging的类型为pom-->

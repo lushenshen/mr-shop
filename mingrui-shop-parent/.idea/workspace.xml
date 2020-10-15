@@ -19,40 +19,83 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b327c7fe-ba01-4672-bcbc-b29f8c4f9e08" name="Default Changelist" comment="品牌删除">
-      <change afterPath="$PROJECT_DIR$/../Thymeleaf-demo/src/main/java/com/baidu/ThyApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Thymeleaf-demo/src/main/java/com/baidu/controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Thymeleaf-demo/src/main/java/com/baidu/entity/StudentEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Thymeleaf-demo/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Thymeleaf-demo/src/main/resources/templates/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../es-demo/src/main/java/com/baidu/RunTestEsAppliction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../es-demo/src/main/java/com/baidu/entity/GoodsEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../es-demo/src/main/java/com/baidu/mapper/GoodsEsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../es-demo/src/main/java/com/baidu/user/ESHighLightUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../es-demo/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../es-demo/src/test/java/Text.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/src/main/java/com/baidu/shop/utils/ESHighLightUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-search1/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-search1/src/main/java/com/baidu/shop/config/MrSwagger2Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-search1/src/main/java/com/baidu/shop/document/GoodsDoc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-search1/src/main/java/com/baidu/shop/service/ShopElasticsearchService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-search/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-search/src/main/java/com/baidu/shop/RunSearchServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-search/src/main/java/com/baidu/shop/feign/GoodsFeign.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-search/src/main/java/com/baidu/shop/feign/SpecificationFeign.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-search/src/main/java/com/baidu/shop/service/ShopElasticsearchServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-search/src/main/resources/application.yml" afterDir="false" />
+    <list default="true" id="b327c7fe-ba01-4672-bcbc-b29f8c4f9e08" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Thymeleaf-demo/Thymeleaf-demo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-user-oauth/mingrui-shop-basic-user-oauth.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-user-oauth/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-user-oauth/src/main/java/com/baidu/RunOauthServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-user-oauth/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/src/main/java/com/baidu/shop/constant/MqMessageConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/src/main/java/com/baidu/shop/constant/UserConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/src/main/java/com/baidu/shop/utils/BCryptUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/src/main/java/com/baidu/shop/utils/LuosimaoDuanxinUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-oauth/mingrui-shop-common-oauth.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-oauth/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-oauth/src/main/java/com/baidu/shop/constant/JwtConstans.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-oauth/src/main/java/com/baidu/shop/dto/UserInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-oauth/src/main/java/com/baidu/shop/utils/JwtUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-oauth/src/main/java/com/baidu/shop/utils/ObjectUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-oauth/src/main/java/com/baidu/shop/utils/RsaUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-oauth/src/test/java/com/mr/test/JwtTokenTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-search1/src/main/java/com/baidu/shop/response/GoodsResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-template/mingrui-shop-service-api-template.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-template/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-template/src/main/java/com/baidu/shop/config/MrSwagger2Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-template/src/main/java/com/baidu/shop/service/TemplateService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-user/mingrui-shop-service-api-user.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-user/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-user/src/main/java/com/baidu/shop/config/MrSwagger2Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-user/src/main/java/com/baidu/shop/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-user/src/main/java/com/baidu/shop/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-user/src/main/java/com/baidu/shop/entity/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-user/src/main/java/com/baidu/shop/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-search/src/main/java/com/baidu/shop/feign/BrandFeign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-search/src/main/java/com/baidu/shop/feign/CategoryFeign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-search/src/main/java/com/baidu/shop/listener/GoodsListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template/src/main/java/com/baidu/shop/RunTemplateServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template/src/main/java/com/baidu/shop/controller/PageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template/src/main/java/com/baidu/shop/feign/BrandFeign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template/src/main/java/com/baidu/shop/feign/CategoryFeign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template/src/main/java/com/baidu/shop/feign/GoodsFeign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template/src/main/java/com/baidu/shop/feign/SpecificationFeign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template/src/main/java/com/baidu/shop/listener/TemplateListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template/src/main/java/com/baidu/shop/service/PageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template/src/main/java/com/baidu/shop/service/impl/PageServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template/src/main/java/com/baidu/shop/service/impl/TemplateServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template/src/main/resources/templates/item.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-user/mingrui-shop-service-user.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-user/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-user/src/main/java/com/baidu/RunUserServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-user/src/main/java/com/baidu/shop/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-user/src/main/java/com/baidu/shop/redis/repository/RedisRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-user/src/main/java/com/baidu/shop/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-user/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/src/main/java/com/baidu/shop/component/MrRabbitMQ.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/src/main/java/com/baidu/shop/utils/JSONUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/src/main/java/com/baidu/shop/utils/JSONUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-xxx/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-xxx/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-xxx/src/main/java/com/baidu/shop/dto/SpecParamDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-xxx/src/main/java/com/baidu/shop/dto/SpecParamDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-xxx/src/main/java/com/baidu/shop/service/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-xxx/src/main/java/com/baidu/shop/service/GoodsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-zuul-serer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-zuul-serer/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-basics/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-basics/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/src/main/java/com/baidu/shop/utils/ESHighLightUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/src/main/java/com/baidu/shop/utils/ESHighLightUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-commoms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-commoms/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-search1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-search1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-search1/src/main/java/com/baidu/shop/service/ShopElasticsearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-search1/src/main/java/com/baidu/shop/service/ShopElasticsearchService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-xxx/src/main/java/com/baidu/shop/dto/SpecGroupDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-xxx/src/main/java/com/baidu/shop/dto/SpecGroupDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-xxx/src/main/java/com/baidu/shop/service/BrandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-xxx/src/main/java/com/baidu/shop/service/BrandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-xxx/src/main/java/com/baidu/shop/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-xxx/src/main/java/com/baidu/shop/service/CategoryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-xxx/src/main/java/com/baidu/shop/service/SpecificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-xxx/src/main/java/com/baidu/shop/service/SpecificationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mingrui-shop-service-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-search/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-search/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-search/src/main/java/com/baidu/shop/service/ShopElasticsearchServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-search/src/main/java/com/baidu/shop/service/ShopElasticsearchServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-search/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-search/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/src/main/java/com/baidu/shop/mapper/BrandMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/src/main/java/com/baidu/shop/mapper/BrandMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/src/main/java/com/baidu/shop/service/impl/BrandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/src/main/java/com/baidu/shop/service/impl/BrandServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/src/main/java/com/baidu/shop/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/src/main/java/com/baidu/shop/service/impl/CategoryServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/src/main/java/com/baidu/shop/service/impl/GoodsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/src/main/java/com/baidu/shop/service/impl/GoodsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/src/main/java/com/baidu/shop/service/impl/SpecificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/src/main/java/com/baidu/shop/service/impl/SpecificationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mingrui-shop-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -66,8 +109,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Aspect" />
-        <option value="Class" />
+        <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -107,6 +151,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-template/src/main" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -116,7 +162,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -124,6 +170,12 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.baidu.shop.service.impl" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.baidu.shop.config" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\idea-project\mr-shop\mingrui-shop-parent\mingrui-shop-service-api\mingrui-shop-service-api-template\src\main" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -133,42 +185,111 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.RunXXXApplication">
-    <configuration name="RunSearchServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.baidu.shop.RunSearchServerApplication" />
-      <module name="mingrui-shop-service-search" />
+  <component name="RunManager" selected="JUnit.JwtTokenTest.parseToken">
+    <configuration name="JwtTokenTest.genRsaKey" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mingrui-shop-common-oauth" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.baidu.shop.*" />
+          <option name="PATTERN" value="com.mr.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.mr.test" />
+      <option name="MAIN_CLASS_NAME" value="com.mr.test.JwtTokenTest" />
+      <option name="METHOD_NAME" value="genRsaKey" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunEurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="mingrui-shop-basic-eureka-server" />
+    <configuration name="JwtTokenTest.genToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mingrui-shop-common-oauth" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.baudu.*" />
+          <option name="PATTERN" value="com.mr.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.baudu.RunEurekaServerApplication" />
+      <option name="PACKAGE_NAME" value="com.mr.test" />
+      <option name="MAIN_CLASS_NAME" value="com.mr.test.JwtTokenTest" />
+      <option name="METHOD_NAME" value="genToken" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunXXXApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="mingrui-shop-service-xxx" />
+    <configuration name="JwtTokenTest.parseToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mingrui-shop-common-oauth" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mr.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mr.test" />
+      <option name="MAIN_CLASS_NAME" value="com.mr.test.JwtTokenTest" />
+      <option name="METHOD_NAME" value="parseToken" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="mingrui-shop-basic-user-oauth" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="mingrui-shop-basic-user-oauth" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunUserServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="mingrui-shop-service-user" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.baidu.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.baidu.RunXXXApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.baidu.RunUserServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -187,16 +308,18 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.RunSearchServerApplication" />
+      <item itemvalue="Spring Boot.RunUserServerApplication" />
       <item itemvalue="Spring Boot.RunZuulServerApplication" />
-      <item itemvalue="Spring Boot.RunEurekaServerApplication" />
-      <item itemvalue="Spring Boot.RunXXXApplication" />
+      <item itemvalue="JUnit.JwtTokenTest.genRsaKey" />
+      <item itemvalue="JUnit.JwtTokenTest.genToken" />
+      <item itemvalue="JUnit.JwtTokenTest.parseToken" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.RunXXXApplication" />
-        <item itemvalue="Application.RunSearchServerApplication" />
-        <item itemvalue="Spring Boot.RunEurekaServerApplication" />
+        <item itemvalue="JUnit.JwtTokenTest.parseToken" />
+        <item itemvalue="JUnit.JwtTokenTest.genToken" />
+        <item itemvalue="JUnit.JwtTokenTest.genRsaKey" />
+        <item itemvalue="Spring Boot.RunUserServerApplication" />
         <item itemvalue="Spring Boot.RunZuulServerApplication" />
       </list>
     </recent_temporary>
@@ -252,7 +375,42 @@
       <workItem from="1600238551469" duration="1244000" />
       <workItem from="1600254056132" duration="2568000" />
       <workItem from="1600256944924" duration="7181000" />
-      <workItem from="1600322480543" duration="5364000" />
+      <workItem from="1600322480543" duration="8034000" />
+      <workItem from="1600340491875" duration="842000" />
+      <workItem from="1600399138433" duration="1719000" />
+      <workItem from="1600408947333" duration="9716000" />
+      <workItem from="1600426975784" duration="12881000" />
+      <workItem from="1600479206925" duration="3169000" />
+      <workItem from="1600652023578" duration="827000" />
+      <workItem from="1600668253009" duration="8384000" />
+      <workItem from="1600686149557" duration="6432000" />
+      <workItem from="1600738346943" duration="1720000" />
+      <workItem from="1600754397427" duration="2993000" />
+      <workItem from="1600772539985" duration="5155000" />
+      <workItem from="1600824730864" duration="2667000" />
+      <workItem from="1600840402703" duration="5749000" />
+      <workItem from="1600859166258" duration="10549000" />
+      <workItem from="1600927819403" duration="5359000" />
+      <workItem from="1600945389425" duration="11849000" />
+      <workItem from="1601004163755" duration="1233000" />
+      <workItem from="1601014166271" duration="6143000" />
+      <workItem from="1601032066720" duration="7225000" />
+      <workItem from="1601039312257" duration="460000" />
+      <workItem from="1601039785918" duration="3874000" />
+      <workItem from="1602222885717" duration="430000" />
+      <workItem from="1602483323830" duration="7397000" />
+      <workItem from="1602501006046" duration="10943000" />
+      <workItem from="1602568982878" duration="6756000" />
+      <workItem from="1602586906261" duration="9697000" />
+      <workItem from="1602655240673" duration="7789000" />
+      <workItem from="1602673749536" duration="8038000" />
+      <workItem from="1602732625840" duration="1210000" />
+      <workItem from="1602733857722" duration="571000" />
+      <workItem from="1602741440389" duration="360000" />
+      <workItem from="1602741821636" duration="22000" />
+      <workItem from="1602741914119" duration="44000" />
+      <workItem from="1602741970697" duration="98000" />
+      <workItem from="1602742305405" duration="1852000" />
     </task>
     <task id="LOCAL-00001" summary="tij">
       <created>1598512883715</created>
@@ -296,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599725478939</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="mysql数据迁移到es(数据准备)">
+      <created>1600327977511</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1600327977511</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,132 +486,157 @@
     <MESSAGE value="规格和分类删除" />
     <MESSAGE value="商品查询" />
     <MESSAGE value="品牌删除" />
-    <option name="LAST_COMMIT_MESSAGE" value="品牌删除" />
+    <MESSAGE value="mysql数据迁移到es(数据准备)" />
+    <option name="LAST_COMMIT_MESSAGE" value="mysql数据迁移到es(数据准备)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="531" y="133" key="#New_Docker_Connection" timestamp="1599550586163">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="531" y="133" key="#New_Docker_Connection/0.0.1536.824@0.0.1536.824" timestamp="1599550586163" />
-    <state x="249" y="0" key="#Project_Structure" timestamp="1599547806011">
+    <state x="249" y="0" key="#Project_Structure" timestamp="1601039603751">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1599547806011" />
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1601039603751" />
     <state x="296" y="6" key="#RunZuulServerApplication" timestamp="1599550520954">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="296" y="6" key="#RunZuulServerApplication/0.0.1536.824@0.0.1536.824" timestamp="1599550520954" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599572999554">
+    <state x="223" y="67" width="1164" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601037234062">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1599572999554" />
-    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser" timestamp="1599726374264">
+    <state x="223" y="67" width="1164" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1601037234062" />
+    <state x="500" y="212" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602675526247">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1599726374264" />
-    <state x="532" y="102" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1599573163549">
+    <state x="500" y="212" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1602675526247" />
+    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser" timestamp="1602677541162">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="532" y="102" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1536.824@0.0.1536.824" timestamp="1599573163549" />
+    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1602677541162" />
+    <state x="532" y="102" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1600413284677">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="532" y="102" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1536.824@0.0.1536.824" timestamp="1600413284677" />
+    <state x="160" y="335" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1601035621547">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="160" y="335" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1601035621547" />
+    <state x="374" y="275" width="803" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1601033539022">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="374" y="275" width="803" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1601033539022" />
     <state x="337" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1599564900180">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="337" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1599564900180" />
-    <state x="499" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598880625179">
+    <state x="499" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602587832879">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1598880625179" />
-    <state x="549" y="166" key="FileChooserDialogImpl" timestamp="1599570322457">
+    <state x="499" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1602587832879" />
+    <state x="549" y="166" key="FileChooserDialogImpl" timestamp="1601032830524">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1599570322457" />
-    <state width="1144" height="184" key="GridCell.Tab.0.bottom" timestamp="1600327717787">
+    <state x="549" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601032830524" />
+    <state width="1493" height="291" key="GridCell.Tab.0.bottom" timestamp="1602744110348">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1144" height="184" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600327717787" />
-    <state width="1144" height="184" key="GridCell.Tab.0.center" timestamp="1600327717787">
+    <state width="1493" height="291" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602744110348" />
+    <state width="1493" height="291" key="GridCell.Tab.0.center" timestamp="1602744110348">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1144" height="184" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600327717787" />
-    <state width="1144" height="184" key="GridCell.Tab.0.left" timestamp="1600327717787">
+    <state width="1493" height="291" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602744110348" />
+    <state width="1493" height="291" key="GridCell.Tab.0.left" timestamp="1602744110348">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1144" height="184" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600327717787" />
-    <state width="1144" height="184" key="GridCell.Tab.0.right" timestamp="1600327717787">
+    <state width="1493" height="291" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602744110348" />
+    <state width="1493" height="291" key="GridCell.Tab.0.right" timestamp="1602744110348">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1144" height="184" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600327717787" />
-    <state width="1144" height="184" key="GridCell.Tab.1.bottom" timestamp="1600327717788">
+    <state width="1493" height="291" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602744110348" />
+    <state width="1493" height="291" key="GridCell.Tab.1.bottom" timestamp="1602744110243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1144" height="184" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600327717788" />
-    <state width="1144" height="184" key="GridCell.Tab.1.center" timestamp="1600327717788">
+    <state width="1493" height="291" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602744110243" />
+    <state width="1493" height="291" key="GridCell.Tab.1.center" timestamp="1602744110243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1144" height="184" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1600327717788" />
-    <state width="1144" height="184" key="GridCell.Tab.1.left" timestamp="1600327717787">
+    <state width="1493" height="291" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1602744110243" />
+    <state width="1493" height="291" key="GridCell.Tab.1.left" timestamp="1602744110243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1144" height="184" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1600327717787" />
-    <state width="1144" height="184" key="GridCell.Tab.1.right" timestamp="1600327717788">
+    <state width="1493" height="291" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1602744110243" />
+    <state width="1493" height="291" key="GridCell.Tab.1.right" timestamp="1602744110243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1144" height="184" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1600327717788" />
-    <state width="1144" height="184" key="GridCell.Tab.2.bottom" timestamp="1600327717788">
+    <state width="1493" height="291" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1602744110243" />
+    <state width="1148" height="209" key="GridCell.Tab.2.bottom" timestamp="1602685954455">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1144" height="184" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600327717788" />
-    <state width="1144" height="184" key="GridCell.Tab.2.center" timestamp="1600327717788">
+    <state width="1148" height="209" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602685954455" />
+    <state width="1148" height="209" key="GridCell.Tab.2.center" timestamp="1602685954455">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1144" height="184" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1600327717788" />
-    <state width="1144" height="184" key="GridCell.Tab.2.left" timestamp="1600327717788">
+    <state width="1148" height="209" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1602685954455" />
+    <state width="1148" height="209" key="GridCell.Tab.2.left" timestamp="1602685954455">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1144" height="184" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1600327717788" />
-    <state width="1144" height="184" key="GridCell.Tab.2.right" timestamp="1600327717788">
+    <state width="1148" height="209" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1602685954455" />
+    <state width="1148" height="209" key="GridCell.Tab.2.right" timestamp="1602685954455">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1144" height="184" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1600327717788" />
-    <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1600256528932">
+    <state width="1148" height="209" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1602685954455" />
+    <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1602742877689">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1600256528932" />
-    <state x="270" y="56" key="SettingsEditor" timestamp="1599637176685">
+    <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1602742877689" />
+    <state x="270" y="56" key="SettingsEditor" timestamp="1602592408830">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="270" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1599637176685" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1599725493676">
+    <state x="270" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1602592408830" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1600327993820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1599725493676" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1600327993820" />
     <state x="560" y="67" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1599132057860">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="560" y="67" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1599132057860" />
-    <state x="313" y="141" width="910" height="641" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1599031014473">
+    <state x="313" y="141" width="910" height="641" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1602587506622">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="313" y="141" width="910" height="641" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1599031014473" />
+    <state x="313" y="141" width="910" height="641" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1602587506622" />
     <state x="93" y="93" width="1350" height="638" key="dock-window-1" timestamp="1598858651810">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1598858651810" />
-    <state x="178" y="72" key="new project wizard" timestamp="1600257842122">
+    <state x="273" y="81" key="new project wizard" timestamp="1602742446030">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="178" y="72" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1600257842122" />
-    <state x="530" y="285" width="627" height="521" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1599637175528">
+    <state x="273" y="81" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1602742446030" />
+    <state x="530" y="285" width="627" height="521" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1601042470333">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="530" y="285" width="627" height="521" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1536.824@0.0.1536.824" timestamp="1599637175528" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1598669655583">
+    <state x="530" y="285" width="627" height="521" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1536.824@0.0.1536.824" timestamp="1601042470333" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1600951889744">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1598669655583" />
-    <state x="433" y="78" width="672" height="678" key="search.everywhere.popup" timestamp="1599720990522">
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1600951889744" />
+    <state x="433" y="78" width="672" height="678" key="search.everywhere.popup" timestamp="1602733457941">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="433" y="78" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1599720990522" />
+    <state x="433" y="78" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602733457941" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo typeName="java.util.HashMap$Node" fieldName="value" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((java.util.ArrayList)((HashMap.Node)((HashMap)skuList).entrySet().toArray()[0]).getValue()).get(0)" language="JAVA" custom="java.util.ArrayList,java.util.HashMap.Node,java.util.HashMap" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

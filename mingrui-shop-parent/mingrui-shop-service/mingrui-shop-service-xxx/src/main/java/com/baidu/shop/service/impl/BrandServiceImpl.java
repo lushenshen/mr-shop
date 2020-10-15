@@ -63,7 +63,7 @@ public class BrandServiceImpl extends BaseApiService implements BrandService {
         if (ObjectUtil.isNotNull(brandDTO.getId()))
             criteria.andEqualTo("id", brandDTO.getId());
 
-        if (StringUtils.isEmpty(brandDTO.getName()))
+        if (!StringUtils.isEmpty(brandDTO.getName()))
             criteria.andLike("name", "%" + brandDTO.getName() + "%");
 
         List<BrandEntity> list = brandMapper.selectByExample(example);
@@ -155,6 +155,18 @@ public class BrandServiceImpl extends BaseApiService implements BrandService {
     public Result<List<BrandEntity>> getBrandByCategory(Integer cid) {
 
         List<BrandEntity> list = brandMapper.getBrandByCategory(cid);
+
+        return this.setResultSuccess(list);
+    }
+
+    @Override
+    public Result<List<BrandEntity>> getBrandByIdList(String brandIdsStr) {
+
+        List<Integer> brandIdList = Arrays.asList(brandIdsStr.split(","))
+                .stream().map(brandIdStr -> Integer.parseInt(brandIdStr))
+                .collect(Collectors.toList());
+
+        List<BrandEntity> list = brandMapper.selectByIdList(brandIdList);
 
         return this.setResultSuccess(list);
     }

@@ -17,6 +17,7 @@
         <module>mingrui-shop-basic-eureka-server</module>
         <module>mingrui-shop-basic-zuul-serer</module>
         <module>mingrui-shop-basic-upload-server</module>
+        <module>mingrui-shop-basic-user-oauth</module>
     </modules>
 
 </project>

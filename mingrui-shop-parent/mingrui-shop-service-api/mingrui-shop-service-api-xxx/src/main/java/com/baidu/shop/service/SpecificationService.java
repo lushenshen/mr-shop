@@ -5,6 +5,7 @@ import com.baidu.shop.base.Result;
 import com.baidu.shop.dto.SpecGroupDTO;
 import com.baidu.shop.dto.SpecParamDTO;
 import com.baidu.shop.entity.SpecGroupEntity;
+import com.baidu.shop.entity.SpecParamEntity;
 import com.baidu.shop.validate.group.MingruiOperation;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -34,7 +35,8 @@ public interface SpecificationService {
 
     @ApiOperation(value = "查询规格参数")
     @GetMapping(value = "specparam/getSpecParamInfo")
-    Result<JSONObject> getSpecParamInfo(SpecParamDTO specParamDTO);
+    //@SpringQueryMap传递get参数
+    Result<List<SpecParamEntity>> getSpecParamInfo(@SpringQueryMap SpecParamDTO specParamDTO);
 
     @ApiOperation(value = "新增规格参数")
     @PostMapping(value = "specparam/save")
